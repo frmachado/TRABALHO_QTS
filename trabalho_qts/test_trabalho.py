@@ -12,3 +12,9 @@ def test_validar_pedido_item_vazio():
     assert validar_pedido("", 2, 5) == "Pedido inválido"
 
 
+def test_validar_pedido_quantidade_invalida():
+    assert validar_pedido("Refrigerante", 0, 5) == "Pedido inválido"
+
+
+def test_calcular_total_errado():
+    assert
