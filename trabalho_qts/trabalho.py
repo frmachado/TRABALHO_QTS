@@ -1,10 +1,12 @@
-def calcular_total(preco, quantidade):
-    return preco * quantidade
+def calcular_total(quantidade, valor_unitario):
+    return quantidade * valor_unitario
 
 
-def validar_pedido(preco, quantidade):
-    if preco <= 0:
-        return False
+def validar_pedido(item, quantidade, valor_unitario):
+    if not item:
+        return "Pedido inválido"
     if quantidade <= 0:
-        return False
-    return True
+        return "Pedido inválido"
+    if valor_unitario <= 0:
+        return "Pedido inválido"
+    return "Pedido válido"
